@@ -254,7 +254,7 @@ export class Game {
 
   updatePlay(dt) {
     const p = this.player;
-    if (this.state === 'intro' && p.mode !== 'zip' && p.mode !== 'drop') this.state = 'play';
+    if (this.state === 'intro' && !['intro', 'zip', 'drop'].includes(p.mode)) this.state = 'play';
     this.blackout = Math.max(0, this.blackout - dt);
     this.updateElevators(dt);
     p.update(dt, this.input);
