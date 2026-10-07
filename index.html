@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Elevator Agent</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div id="hud" class="hidden">
+    <div class="top">
+      <div class="cell"><label>SCORE</label><span id="score">000000</span></div>
+      <div class="cell"><label>HIGH</label><span id="hi">000000</span></div>
+      <div class="cell center"><span id="mission">MISSION 1</span></div>
+      <div class="cell"><label>DOCS</label><span id="docs"></span></div>
+      <div class="cell"><label>AGENTS</label><span id="lives"></span></div>
+    </div>
+    <div class="floorbox"><label>FLOOR</label><span id="floor">30</span></div>
+    <div id="map"></div>
+  </div>
+  <div id="popups"></div>
+  <div id="banner"></div>
+  <div id="msg"></div>
+  <div id="title" class="overlay">
+    <div class="logo">
+      <small>A TRIBUTE TO TAITO'S ELEVATOR ACTION (1983)</small>
+      <h1>ELEVATOR<span>AGENT</span></h1>
+      <p class="tag">MERIDIAN TOWER · 30 FLOORS · ONE WAY DOWN</p>
+    </div>
+    <p class="blink start">PRESS ENTER</p>
+    <div class="controls">
+      <div><kbd>← →</kbd> move</div>
+      <div><kbd>↑ ↓</kbd> drive elevators · escalators · ↑ enter red doors · ↓ duck</div>
+      <div><kbd>Z</kbd> fire &nbsp; <kbd>X</kbd>/<kbd>Space</kbd> jump-kick &nbsp; <kbd>P</kbd> pause &nbsp; <kbd>M</kbd> mute</div>
+      <div class="hint">Jump and shoot the lights to drop them on enemies. Crush agents with the elevators. Collect every document behind the red doors, then escape in the car.</div>
+    </div>
+    <p class="hi">HIGH SCORE <span id="title-hi">020000</span></p>
+  </div>
+  <div id="clear" class="overlay"></div>
+  <div id="gameover" class="overlay"></div>
+  <div id="pause" class="overlay"><h1>PAUSED</h1></div>
+  <div id="fade"></div>
+  <div id="loading">LOADING…</div>
+  <div id="touch">
+    <div class="dpad">
+      <button data-a="up">▲</button>
+      <button data-a="left">◀</button><button data-a="right">▶</button>
+      <button data-a="down">▼</button>
+    </div>
+    <div class="btns">
+      <button data-a="jump">JUMP</button>
+      <button data-a="fire">FIRE</button>
+      <button data-a="start" class="small">START</button>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

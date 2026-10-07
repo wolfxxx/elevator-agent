@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+*.blend1
+# raw Mixamo download (the game uses the converted public/models/granny.glb)
+*.fbx
+# working Blender file (contains the raw Mixamo import); blender/models-source.blend is the shareable source
+blender/elevatoraction.blend
